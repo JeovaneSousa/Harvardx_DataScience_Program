@@ -1,4 +1,5 @@
-library("dslabs")
+library(dslabs)
+library(dplyr)
 
 #question 3
 #Mandi, Amy, Nicole, and Olivia all ran different distances in different time intervals. Their distances (in miles) and times (in minutes) are as follows:
@@ -12,7 +13,9 @@ library("dslabs")
 options(digits = 4)
 new_table <- data.frame(name = c("Mandi", "Amy", "Nicole", "Olivia"),
                         distance = c(0.8, 3.1, 2.8, 4.0),
-                        time = c(10, 30, 40, 50)/60,speed =c(new_table$distance/new_table$time),stringsAsFactors = FALSE)
+                        time = (c(10,30,40,50)/60),
+                        speed =c(new_table$distance/new_table$time),
+                        stringsAsFactors = FALSE)
 
 new_table
 
